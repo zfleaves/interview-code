@@ -1,0 +1,545 @@
+.home-content address,.home-content cite,.home-content dfn,.home-content em,.home-content i,.home-content span[lang],.home-content var {
+    font-style: italic
+}
+
+.home-content {
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif,SimHei,SimSun
+}
+
+.cke_editable {
+    margin: 24px;
+    word-wrap: break-word
+}
+
+.home-content figure.right,.home-content img.right {
+    float: right;
+    margin-left: 15px;
+    padding: 5px
+}
+
+.home-content figure.left,.home-content img.left {
+    float: left;
+    margin-right: 15px;
+    padding: 5px
+}
+
+.home-content .marker {
+    background-color: #ff0
+}
+
+.home-content figure {
+    text-align: center;
+    margin: 0 24px;
+    display: inline-block
+}
+
+.home-content figure>figcaption {
+    text-align: center;
+    margin: 8px;
+    color: #999;
+    font-size: 14px;
+    display: block
+}
+
+.home-content a>img {
+    padding: 1px;
+    margin: 1px;
+    border: none;
+    outline: #0782c1 solid 1px
+}
+
+.home-content .code-featured {
+    border: 5px solid red
+}
+
+.home-content .math-featured {
+    padding: 20px;
+    box-shadow: 0 0 2px rgba(200,0,0,1);
+    background-color: rgba(255,0,0,.05);
+    margin: 10px
+}
+
+.home-content .image-clean {
+    border: 0;
+    background: 0 0;
+    padding: 0
+}
+
+.home-content .image-clean>figcaption {
+    font-size: .9em;
+    text-align: right
+}
+
+.home-content .image-grayscale {
+    background-color: #fff;
+    color: #666
+}
+
+.home-content .image-grayscale img,.home-content img.image-grayscale {
+    filter: grayscale(100%)
+}
+
+.home-content .embed-240p {
+    max-width: 426px;
+    max-height: 240px;
+    margin: 0 auto
+}
+
+.home-content .embed-360p {
+    max-width: 640px;
+    max-height: 360px;
+    margin: 0 auto
+}
+
+.home-content .embed-480p {
+    max-width: 854px;
+    max-height: 480px;
+    margin: 0 auto
+}
+
+.home-content .embed-720p {
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto
+}
+
+.home-content .embed-1080p {
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #4d4d4d;
+    font-weight: 400;
+    line-height: 24px!important;
+    margin: 0 0 16px;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.home-content .img-center,p[align=center] {
+    text-align: center
+}
+
+.home-content img {
+    max-width: 100%;
+    height: auto
+}
+
+.home-content strong,.home-content strong span {
+    font-weight: 700
+}
+
+.home-content * {
+    box-sizing: border-box
+}
+
+.home-content h1,.home-content h1 *,.home-content h2,.home-content h2 *,.home-content h3,.home-content h3 *,.home-content h4,.home-content h4 *,.home-content h5,.home-content h5 *,.home-content h6,.home-content h6 * {
+    color: #4f4f4f;
+    margin: 24px 0 8px;
+    font-weight: 600
+}
+
+.home-content ol,.home-content ul {
+    margin: 0 0 24px;
+    padding: 0;
+    font-size: 16px
+}
+
+.home-content ul ol {
+    margin: 0 0 24px 32px
+}
+
+.home-content ul li {
+    list-style-type: disc;
+    margin: 8px 0 0 32px
+}
+
+.home-content ol li {
+    list-style-type: decimal;
+    margin-left: 40px;
+    margin-top: 8px
+}
+
+.home-content h1 {
+    font-size: 24px;
+    line-height: 34px
+}
+
+.home-content h2 {
+    font-size: 22px;
+    line-height: 32px
+}
+
+.home-content h3 {
+    font-size: 20px;
+    line-height: 30px
+}
+
+.home-content h4 {
+    font-size: 18px;
+    line-height: 26px
+}
+
+.home-content h5 {
+    font-size: 16px;
+    line-height: 26px
+}
+
+.home-content h6 {
+    font-size: 16px;
+    line-height: 24px
+}
+
+.home-content blockquote {
+    display: block;
+    padding: 16px;
+    margin: 0 0 24px;
+    // border-left: 8px solid #dddfe4;
+    background: #eef0f4;
+    overflow: auto;
+    overflow-scrolling: touch;
+    word-wrap: normal;
+    word-break: normal
+}
+
+.home-content blockquote ol,.home-content blockquote ul {
+    margin-bottom: 16px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px
+}
+
+.home-content blockquote ol li,.home-content blockquote ul li {
+    margin-bottom: 0
+}
+
+.home-content blockquote p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #4f4f4f
+}
+
+.home-content hr {
+    margin: 24px 0;
+    border: none;
+    border-bottom: solid #ccc 1px
+}
+
+.home-content table tr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    background-color: #fff
+}
+
+.home-content table {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.home-content tbody {
+    border: 0
+}
+
+.home-content table tr:nth-child(2n) {
+    background-color: #f7f7f7
+}
+
+.home-content table tr td,.home-content table tr th {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #4f4f4f;
+    line-height: 22px;
+    padding: 8px;
+    text-align: left
+}
+
+.home-content table tr td p,.home-content table tr th p {
+    font-size: 14px;
+    color: #4f4f4f;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    line-height: 22px
+}
+
+.home-content table tr th p {
+    font-weight: 700
+}
+
+.home-content table tr td code,.home-content table tr th code {
+    white-space: normal;
+    word-break: break-word
+}
+
+.home-content table tr th {
+    font-weight: 700;
+    background-color: #eff3f5
+}
+
+.home-content dl {
+    margin: 24px
+}
+
+.home-content dl dt {
+    margin: 8px;
+    font-weight: 700
+}
+
+.home-content dl dt dd {
+    margin: 8px
+}
+
+.home-content abbr[data-original-title],.home-content abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #999
+}
+
+.home-content .initialism {
+    font-size: 90%;
+    text-transform: uppercase
+}
+
+.home-content pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0 0 24px;
+    overflow-x: auto;
+    padding: 8px
+}
+
+.marker {
+    background-color: #ff0
+}
+
+home-content img.mathcode {
+    margin: 0 8px
+}
+
+.home-content kbd,.home-content pre,.home-content samp {
+    font-family: Consolas,Inconsolata,Courier,monospace;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000
+}
+
+.home-content code {
+    border-radius: 4px
+}
+
+.home-content a {
+    color: #4ea1db;
+    text-decoration: none
+}
+
+.home-content a:focus,.home-content a:hover {
+    color: #ca0c16
+}
+
+.home-content a:visited {
+    color: #6795b5
+}
+
+.home-content .hot-keyword:visited {
+    color: #3399ea
+}
+
+.home-content .footnote {
+    vertical-align: top;
+    position: relative;
+    top: -4px;
+    font-size: 12px
+}
+
+.home-content .flow-chart,.home-content .sequence-diagram {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 14px!important
+}
+
+.home-content .flow-chart [fill="#000"],.home-content .flow-chart [fill="#000000"],.home-content .flow-chart [fill=black],.home-content .sequence-diagram [fill="#000"],.home-content .sequence-diagram [fill="#000000"],.home-content .sequence-diagram [fill=black] {
+    fill: #4f4f4f
+}
+
+.home-content .flow-chart [stroke="#000000"],.home-content .sequence-diagram [stroke="#000000"] {
+    stroke: #4f4f4f
+}
+
+.home-content .MathJax_SVG_Display {
+    text-align: center;
+    margin: 24px 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4f4f4f;
+    position: relative;
+    text-indent: 0;
+    max-width: none;
+    max-height: none;
+    min-width: 0;
+    min-height: 0;
+    width: 100%
+}
+
+.home-content pre code {
+    display: block;
+    line-height: 22px;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    border-radius: 4px;
+    padding: 8px;
+    tab-size: 4
+}
+
+.home-content pre code::-webkit-scrollbar {
+    height: 6px;
+    width: 138px
+}
+
+.home-content pre code::-webkit-scrollbar-thumb {
+    background: #C2C2C2;
+    border-radius: 4px
+}
+
+.home-content pre code code.hljs {
+    padding: 0
+}
+
+.home-content pre code:not(.hljs) {
+    background-color: #f3f4f5
+}
+
+.home-content pre code,.home-content pre code div,.home-content pre code span {
+    font-size: 14px;
+    font-family: "Source Code Pro","DejaVu Sans Mono","Ubuntu Mono","Anonymous Pro","Droid Sans Mono",Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,"PingFang SC","Microsoft YaHei",sans-serif
+}
+
+.home-content .prettyprint,.home-content pre.prettyprint {
+    margin: 0 0 24px;
+    padding: 8px 16px 4px 56px;
+    background-color: #f6f8fa;
+    border: none
+}
+
+.home-content .prettyprint .pre-numbering {
+    position: absolute;
+    width: 48px;
+    background-color: #eef0f4;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    text-align: right
+}
+
+.home-content .pre-numbering li {
+    padding: 0 8px;
+    list-style: none;
+    margin: 0
+}
+
+.home-content dl dd {
+    margin: 0 0 8px 40px
+}
+
+.home-content kbd {
+    padding: 2px 8px;
+    border: 1px solid rgba(63,63,63,.25);
+    box-shadow: 0 1px 0 rgba(63,63,63,.25);
+    background-color: #fff;
+    color: #333;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 2px;
+    white-space: nowrap
+}
+
+.home-content .dp-highlighter {
+    font-size: 12px;
+    text-align: left;
+    margin: 0 0 24px
+}
+
+.home-content code ol {
+    margin: 0;
+    overflow: hidden
+}
+
+.home-content code ol li {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 0;
+    height: 22px
+}
+
+.home-content code ol li div.hljs-ln-code {
+    margin-left: 8px
+}
+
+.home-content code ol li div.hljs-ln-code,.home-content code ol li div.hljs-ln-numbers {
+    float: left;
+    height: 22px;
+    font-family: "Source Code Pro","DejaVu Sans Mono","Ubuntu Mono","Anonymous Pro","Droid Sans Mono",Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,"PingFang SC","Microsoft YaHei",sans-serif
+}
+
+.home-content code ol li div.hljs-ln-numbers {
+    width: 24px;
+    border-right: 1px solid #c5c5c5
+}
+
+.home-content code ol li div.hljs-ln-numbers .hljs-ln-line {
+    word-wrap: normal
+}
+
+.home-content code ol.hundred li div.hljs-ln-numbers {
+    width: 30px
+}
+
+.home-content code ol.thousand li div.hljs-ln-numbers {
+    width: 36px
+}
+
+.home-content .csdn-data-video {
+    width: 200px
+}
+
+.home-content .csdn-data-video img {
+    margin: 0;
+    display: block;
+    width: 200px;
+    height: 112px
+}
+
+.home-content .csdn-data-video p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px
+}
+
+.home-content pre[data-from=code-for-outside] {
+    overflow: hidden
+}
+
+.home-content pre[data-from=code-for-outside] code {
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.home-content pre[data-from=code-for-outside] code * {
+    overflow: visible;
+    overflow-wrap: break-word
+}
+
+.home-content pre[data-from=code-for-outside] p code {
+    padding: 0
+}

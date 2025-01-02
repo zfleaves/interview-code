@@ -1,0 +1,79 @@
+<template>
+  <h5
+    id="%F0%9F%8D%876%E3%80%81%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3%3F"
+  >
+    7、闭包的理解?
+  </h5>
+  <blockquote>
+    <ul>
+      <li><strong>概念&#xff1a;</strong>有权访问另一个函数内部变量的函数。</li>
+      <li>
+        <strong>本质&#xff1a;</strong
+        ><span style="color: #fe2c24"
+          >是指有权访问另一个函数作用域中变量的函数&#xff0c;创建闭包的最常见的方式就是在一个函数内创建另一个函数&#xff0c;通过另一个函数访问这个函数的局部变量&#xff0c;利用闭包可以突破作用链域&#xff0c;将函数内部的变量和方法传递到外部。</span
+        >
+      </li>
+      <li><strong>面试&#xff1a;什么是闭包&#xff1f;</strong></li>
+    </ul>
+    <p>
+      <strong>
+        通俗的来说&#xff1a;闭包是在一个函数内部在定一个函数&#xff0c;然后内部函数访问外部函数的一个变量就会形成闭包&#xff0c;闭包的话会形成一个私有空间&#xff0c;然后避免全局变量的一个污染&#xff0c;然后会持久化存储数据到内存中&#xff0c;但是闭包也有弊端&#xff0c;它会导致内存泄漏</strong
+      >
+    </p>
+    <ul>
+      <li><strong>拓展&#xff1a;内存泄漏怎么解决&#xff1f;</strong></li>
+    </ul>
+    <p>
+      首先避免它的使用&#xff0c;其次的话就是变量执行完以后&#xff0c;可以让它赋值为null&#xff0c;最后利用JS的一个垃圾回收机制进行回收
+    </p>
+    <ul>
+      <li><strong>闭包用处&#xff1a;</strong></li>
+    </ul>
+    <ol>
+      <li>读取内部函数的变量&#xff1b;</li>
+      <li>
+        这些变量的值始终会保持在内存中&#xff0c;不会在外层函数调用后被自动清除
+      </li>
+    </ol>
+    <ul>
+      <li><strong>闭包优点&#xff1a;</strong></li>
+    </ul>
+    <ol>
+      <li>变量会一直在内存中&#xff1b;</li>
+      <li>避免全局变量的污染&#xff1b;</li>
+      <li>私有变量的存在&#xff1b;</li>
+    </ol>
+    <ul>
+      <li><strong>闭包缺点</strong>&#xff1a;</li>
+    </ul>
+    <p>
+      变量长期储存在内存中&#xff0c;会增大内存的使用量&#xff0c;使用不当会造成<strong
+        >内存泄露</strong
+      >
+    </p>
+    <ul>
+      <li><strong>判断闭包的3个特点&#xff1a;</strong></li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;1.函数嵌套函数&#xff1b;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;2.内部函数一定操作了外部函数的局部变量&#xff1b;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;3.外部函数一定将内部函数返回到外部并保存在一个全局变量中&#xff1b;</p>
+    <ul>
+      <li><strong>判断闭包的执行结果&#xff1a;</strong></li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;1.外部函数被调用了几次就有几个受保护的局部变量的副本&#xff1b;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;2.来自一个闭包的函数被调用几次&#xff0c;受保护的局部变量就变化几次&#xff1b;
+    </p>
+    <ul>
+      <li><strong>闭包特性&#xff1a;</strong></li>
+    </ul>
+    <ol>
+      <li>函数嵌套函数&#xff1b;</li>
+      <li>内部函数可以直接使用外部函数的局部变量&#xff1b;</li>
+      <li>变量或参数不会被垃圾回收机制回收&#xff1b;</li>
+    </ol>
+  </blockquote>
+</template>
+
+<script setup name=""></script>
+
+<style lang="scss" scoped></style>

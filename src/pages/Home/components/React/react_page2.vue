@@ -1,0 +1,76 @@
+<template>
+  <h5
+    id="2%E3%80%81React%20%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"
+  >
+    2、React 的生命周期方法有哪些？
+  </h5>
+  <p>
+    React的生命周期方法有很多，并且在不同的React版本中可能会有一些变化。为了更好地理解React的生命周期，我将它们按照React
+    16版本及其之后的版本进行整理，以帮助你更好地理解。
+  </p>
+  <p>
+    在React
+    16版本及其之后，React的生命周期方法可分为三个阶段：<strong>挂载阶段、更新阶段和卸载阶段</strong>。以下是React
+    16版本及其之后的生命周期方法列表：
+  </p>
+  <p><strong>挂载阶段</strong>：</p>
+  <blockquote>
+    <ul>
+      <li>constructor：组件实例化时调用，用于初始化状态和绑定方法。</li>
+      <li>
+        static
+        getDerivedStateFromProps：在渲染之前调用，用于根据新的属性值计算并返回一个新的状态。
+      </li>
+      <li>render：渲染组件的内容。</li>
+      <li>componentDidMount：组件挂载后调用，可以进行异步操作、订阅事件等。</li>
+    </ul>
+  </blockquote>
+  <p><strong>更新阶段</strong>：</p>
+  <blockquote>
+    <ul>
+      <li>
+        static
+        getDerivedStateFromProps：在渲染之前调用，用于根据新的属性值计算并返回一个新的状态。
+      </li>
+      <li>
+        shouldComponentUpdate：在渲染之前调用，用于决定是否重新渲染组件，默认返回true。
+      </li>
+      <li>render：渲染组件的内容。</li>
+      <li>
+        getSnapshotBeforeUpdate：在最终将内容渲染到DOM之前调用，用于获取DOM更新前的快照。
+      </li>
+      <li>
+        componentDidUpdate：组件更新后调用，可以进行DOM操作、发起网络请求等。
+      </li>
+    </ul>
+  </blockquote>
+  <p><strong>卸载阶段</strong>：</p>
+  <blockquote>
+    <ul>
+      <li>
+        componentWillUnmount：组件卸载前调用，可以进行清理操作，如取消订阅、清除定时器等。
+      </li>
+    </ul>
+  </blockquote>
+  <p>另外，React 16.3版本后引入了以下生命周期方法：</p>
+  <blockquote>
+    <ul>
+      <li>
+        static
+        getDerivedStateFromError：在子组件渲染过程中，如果发生错误，会调用该方法，返回一个新的状态。
+      </li>
+      <li>
+        componentDidCatch：在子组件渲染过程中，如果发生错误，会调用该方法，用于记录错误信息或上报错误。
+      </li>
+    </ul>
+  </blockquote>
+  <p>
+    需要注意的是，React
+    17版本之后，一些生命周期方法被标记为过时，并推荐使用其他替代方法来实现相应的功能。在使用React时，可以根据具体的需求和React版本来选择合适的生命周期方法。同时，React还提供了钩子函数的方式（如useEffect钩子）来完成与生命周期相关的操作，这也是React
+    16.8版本及其之后的新特性。&nbsp;
+  </p>
+</template>
+
+<script setup name=""></script>
+
+<style lang="scss" scoped></style>
