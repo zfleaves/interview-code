@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var MyCalendarTwo = function () {
+            this.booked = [];
+            this.overlaps = [];
+        };
+
+        /** 
+         * @param {number} startTime 
+         * @param {number} endTime
+         * @return {boolean}
+         */
+        MyCalendarTwo.prototype.book = function (startTime, endTime) {
+            for (const arr of this.overlaps) {
+                let left = arr[0];
+                let right = arr[1];
+                if (left < endTime && startTime < right) {
+                    console.log('false: ', false);
+                    return false
+                }
+            }
+
+            for (const arr of this.booked) {
+                let left = arr[0];
+                let right = arr[1];
+                if (left < endTime && startTime < right) {
+                    this.overlaps.push([Math.max(left, startTime), Math.min(right, endTime)]);
+                }
+            }
+
+
+            this.booked.push([startTime, endTime]);
+            console.log('true: ', true);
+            return true;
+        };
+
+        var myCalendarTwo = new MyCalendarTwo()
+        myCalendarTwo.book(10, 20); // 返回 True，能够预定该日程。
+        myCalendarTwo.book(50, 60); // 返回 True，能够预定该日程。
+        myCalendarTwo.book(10, 40); // 返回 True，该日程能够被重复预定。
+        myCalendarTwo.book(5, 15);  // 返回 False，该日程导致了三重预定，所以不能预定。
+        myCalendarTwo.book(5, 10); // 返回 True，能够预定该日程，因为它不使用已经双重预订的时间 10。
+        myCalendarTwo.book(25, 55); // 返回 True，能够预定该日程，因为时间段 [25, 40) 将被第三个日程重复预定，时间段 [40, 50) 将被单独预定，而时间段 [50, 55) 将被第二个日程重复预定。
+
+
+        /**
+         * @param {number} bottom
+         * @param {number} top
+         * @param {number[]} special
+         * @return {number}
+         */
+        var maxConsecutive = function (bottom, top, special) {
+            special.push(bottom - 1);
+            special.push(top + 1);
+            special.sort((a, b) => a - b);
+            let ans = 0;
+            for (let i = 0; i < special.length - 1; ++i) {
+                ans = Math.max(ans, special[i + 1] - special[i] - 1);
+            }
+            return ans;
+        };
+        console.log(maxConsecutive(6, 8, [7, 6, 8]));
+
+        var ATM = function () {
+            this.cnt = [0, 0, 0, 0, 0]; // 每张钞票剩余数量
+            this.value = [20, 50, 100, 200, 500]; // 每张钞票面额
+        };
+
+        ATM.prototype.deposit = function (banknotesCount) {
+            for (let i = 0; i < 5; ++i) {
+                this.cnt[i] += banknotesCount[i];
+            }
+        };
+
+        ATM.prototype.withdraw = function (amount) {
+            let res = new Array(5).fill(0);
+            // 模拟尝试取出钞票的过程
+            for (let i = 4; i >= 0; --i) {
+                res[i] = Math.min(this.cnt[i], Math.floor(amount / this.value[i]));
+                amount -= res[i] * this.value[i];
+            }
+            if (amount > 0) {
+                // 无法完成该操作
+                return [-1];
+            } else {
+                // 可以完成该操作
+                for (let i = 0; i < 5; ++i) {
+                    this.cnt[i] -= res[i];
+                }
+                console.log('res: ', res);
+                return res;
+            }
+        };
+        const atm = new ATM();
+        atm.deposit([0, 3, 0, 2, 1]); // 存入 1 张 100 元、2 张 200 元、1 张 500 元钞票。
+        atm.withdraw(150); // 返回 [0,0,1,0,1] 。返回值数组中元素的顺序不重要，只要满足上面的条件即可。
+        // atm.deposit([0, 1, 0, 1, 1]); // 存入 1 张 50 元、1 张 200 元、1 张 500 元钞票。
+        // atm.withdraw(600); // 返回 [-1] 。交易无法完成，因为 ATM 中剩余钞票的面值总和为 100 元，小于 600 元。
+        // atm.withdraw(550); // 返回 [0,1,0,0,1] 。
+
+        function nextPermutation(nums) {
+            let i = nums.length - 2;                   // 向左遍历，i从倒数第二开始是为了nums[i+1]要存在
+            while (i >= 0 && nums[i] >= nums[i + 1]) { // 寻找第一个小于右邻居的数
+                i--;
+            }
+            if (i >= 0) {                             // 这个数在数组中存在，从它身后挑一个数，和它换
+                let j = nums.length - 1;                // 从最后一项，向左遍历
+                while (j >= 0 && nums[j] <= nums[i]) {  // 寻找第一个大于 nums[i] 的数
+                    j--;
+                }
+                [nums[i], nums[j]] = [nums[j], nums[i]]; // 两数交换，实现变大
+            }
+            // 如果 i = -1，说明是递减排列，如 3 2 1，没有下一排列，直接翻转为最小排列：1 2 3
+            let l = i + 1;
+            let r = nums.length - 1;
+            while (l < r) {                            // i 右边的数进行翻转，使得变大的幅度小一些
+                [nums[l], nums[r]] = [nums[r], nums[l]];
+                l++;
+                r--;
+            }
+            return nums;
+        }
+        const result = nextPermutation([1, 2, 3]);
+        console.log('result: ', result);
+
+        var longestValidParentheses = function (s) {
+            const n = s.length;
+            let res = 0;
+            let stack = [-1];
+            for (let i = 0; i < n; i++) {
+                if (s[i] === '(') {
+                    stack.push(i);
+                } else {
+                    stack.pop();
+                    if (stack.length) {
+                        const curMaxlen = i - stack[stack.length - 1];
+                        res = Math.max(curMaxlen, res)
+                    } else {
+                        stack.push(i)
+                    }
+                }
+            }
+            return res;
+        };
+        console.log(longestValidParentheses('()(()))())()'));
+        var isValidSudoku = function (board) {
+            let rows = {};
+            let colums = {};
+            let boxs = {};
+            for (let i = 0; i < 9; i++) {
+                console.log('board[i]: ', board[i]);
+                for (let j = 0; j < 9; j++) {
+                    const num = board[i][j];
+                    // console.log('num: ', num);
+                    let boxIndx = parseInt(i / 3) * 3 + parseInt(j / 3);
+                    // console.log('parseInt(i / 3) * 3: ', parseInt(i / 3) * 3);
+                    // console.log('boxIndx: ', boxIndx);
+                    if (num !== '.') {
+                        if (rows[i + '-' + num] || colums[j + '-' + num] || boxs[boxIndx + '-' + num]) {
+                            return false
+                        }
+                        rows[i + '-' + num] = true;
+                        colums[j + '-' + num] = true;
+                        boxs[boxIndx + '-' + num] = true;
+                    }
+                }
+            }
+            return true
+        };
+        console.log(isValidSudoku([["5", "3", ".", ".", "7", ".", ".", ".", "."], ["6", ".", ".", "1", "9", "5", ".", ".", "."], [".", "9", "8", ".", ".", ".", ".", "6", "."], ["8", ".", ".", ".", "6", ".", ".", ".", "3"], ["4", ".", ".", "8", ".", "3", ".", ".", "1"], ["7", ".", ".", ".", "2", ".", ".", ".", "6"], [".", "6", ".", ".", ".", ".", "2", "8", "."], [".", ".", ".", "4", "1", "9", ".", ".", "5"], [".", ".", ".", ".", "8", ".", ".", "7", "9"]]))
+
+        function combinationSum(candidates, target) {
+            // 初始化动态规划数组，使用null来表示尚未计算的组合
+            const dp = Array.from({ length: target + 1 }, () => []);
+            dp[0] = [[]]; // 初始化目标为0时的组合为空数组
+
+            for (let i = 0; i < candidates.length; i++) {
+                for (let j = candidates[i]; j <= target; j++) {
+                    for (let group of dp[j - candidates[i]]) {
+                        let newGroup = [...group, candidates[i]]; // 创建新组合
+                        dp[j].push(newGroup); // 将新组合添加到dp[j]中
+                    }
+                }
+            }
+
+            return dp[target];
+        }
+        console.log(combinationSum([2, 3, 6, 7], 7));
+
+        var combinationSum2 = function (candidates, target) {
+            let res = [];
+            candidates = candidates.sort((a, b) => a - b);
+            // [1,1,2,5,6,7,10]
+            const df = (sum, startIndex, path) => {
+                if (startIndex === candidates.length) return;
+                if (sum > target) return;
+                if (sum === target) {
+                    return res.push(path.slice());
+                }
+                for (let i = startIndex; i < candidates.length; i++) {
+                    const num = candidates[startIndex];
+                    path.push(num);
+                    df(sum + num, i + 1, path);
+                    path.pop();
+                }
+            }
+            df(0, 0, []);
+            return res;
+        };
+        console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8));
+
+        var permute = function(nums) {
+            const len = nums.length;
+            if (len === 1) return [nums];
+            let res = [];
+            let path = [];
+            const df = (used) => {
+                if (path === len) {
+                    res.push(path.slice());
+                    return
+                }
+                for (let i = 0; i < len; i++) {
+                    if (used[i]) continue;
+                    path.push(nums[i]);
+                    used[i] = true;
+                    df(used);
+                    path.pop();
+                    used[i] = false;
+                }
+            }
+            df([]);
+            return res;
+        };
+        console.log(permute([1,2,3]))
+
+        var minimumSubarrayLength = function(nums, k) {
+            let n = nums.length;
+            let res = Number.MAX_VALUE;
+            for (let i = 0; i < n; i++) {
+                let value = 0;
+                for (let j = i; j < n; j++) {
+                    value |= nums[j];
+                    if (value >= k) {
+                        res = Math.min(res, j - i + 1);
+                        break;
+                    }
+                }
+            }
+            return res === Number.MAX_VALUE ? -1 : res;
+        };
+        console.log(minimumSubarrayLength([2,1,8], 10))
+    </script>
+</body>
+
+</html>

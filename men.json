@@ -1,0 +1,226 @@
+[
+    {
+        "taskCode": "userTrend-export",
+        "taskName": "用户数据管理-用户趋势-导出",
+        "resourceName": "导出",
+        "resourceId": 23809,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "newUser-export",
+        "taskName": "用户数据管理-新增用户-导出",
+        "resourceName": "导出",
+        "resourceId": 23810,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "activeUser-export",
+        "taskName": "用户数据管理-活跃用户-导出",
+        "resourceName": "导出",
+        "resourceId": 23811,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "startTimes-export",
+        "taskName": "用户数据管理-启动次数-导出",
+        "resourceName": "导出",
+        "resourceId": 23812,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "sportsTrend-export",
+        "taskName": "运动数据管理-运动趋势-导出",
+        "resourceName": "导出",
+        "resourceId": 23813,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "behaviorList-export",
+        "taskName": "运动数据管理-行为榜单-导出",
+        "resourceName": "导出",
+        "resourceId": 23814,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "contentList-export",
+        "taskName": "运动数据管理-应用榜单-导出",
+        "resourceName": "导出",
+        "resourceId": 23815,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "contentPortrait-export",
+        "taskName": "运动数据管理-应用画像-导出",
+        "resourceName": "导出",
+        "resourceId": 23816,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "applicationData-export",
+        "taskName": "运动数据管理-应用数据-导出",
+        "resourceName": "导出",
+        "resourceId": 23817,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "userInfo-export",
+        "taskName": "用户管理-用户信息-导出",
+        "resourceName": "导出",
+        "resourceId": 23964,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "userMember-export",
+        "taskName": "用户管理-成员信息-导出",
+        "resourceName": "导出",
+        "resourceId": 23822,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "useIconManager-export",
+        "taskName": "用户管理-用户资产-导出",
+        "resourceName": "导出",
+        "resourceId": 23824,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "sportsData-export",
+        "taskName": "用户管理-运动记录-导出",
+        "resourceName": "导出",
+        "resourceId": 23828,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "feedbackManage-feedExport",
+        "taskName": "用户管理-用户反馈-意见反馈导出",
+        "resourceName": "意见反馈导出",
+        "resourceId": 23830,
+        "resourceCode": "feedExport"
+    },
+    {
+        "taskCode": "feedbackManage-reportExport",
+        "taskName": "用户管理-用户反馈-举报导出",
+        "resourceName": "举报导出",
+        "resourceId": 23950,
+        "resourceCode": "reportExport"
+    },
+    {
+        "taskCode": "questManager-export",
+        "taskName": "用户管理-问卷管理-导出",
+        "resourceName": "导出",
+        "resourceId": 23832,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "questManager-export",
+        "taskName": "用户管理-用户答卷-导出",
+        "resourceName": "导出",
+        "resourceId": 23836,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "discussManager-export",
+        "taskName": "用户管理-评论管理-导出",
+        "resourceName": "导出",
+        "resourceId": 23838,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "userReminder-export",
+        "taskName": "用户管理-用户催更-导出",
+        "resourceName": "导出",
+        "resourceId": 23840,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "appInfo-export",
+        "taskName": "内容管理-应用信息-导出",
+        "resourceName": "导出",
+        "resourceId": 23795,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "appInfo-contentManager-export",
+        "taskName": "内容管理-应用信息-内容管理-导出",
+        "resourceName": "导出",
+        "resourceId": 23845,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "activityList-export",
+        "taskName": "营销活动-赛事活动-导出",
+        "resourceName": "导出",
+        "resourceId": 23955,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "prizeList-export",
+        "taskName": "营销活动-活动奖品-导出",
+        "resourceName": "导出",
+        "resourceId": 23887,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "abnormalMonitor-export",
+        "taskName": "营销活动-异常监控-导出",
+        "resourceName": "导出",
+        "resourceId": 23892,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "activityAbnormalConfig-export",
+        "taskName": "营销活动-异常配置-导出",
+        "resourceName": "导出",
+        "resourceId": 23895,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "growthTask-export",
+        "taskName": "用户激励-成长任务-导出",
+        "resourceName": "导出",
+        "resourceId": 23904,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "growthRights-export",
+        "taskName": "用户激励-成长权益-导出",
+        "resourceName": "导出",
+        "resourceId": 23908,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "exchangeRate-export",
+        "taskName": "用户激励-星币汇率-导出",
+        "resourceName": "导出",
+        "resourceId": 23912,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "abnormalFlow-export",
+        "taskName": "用户激励-星币异常流水-导出",
+        "resourceName": "导出",
+        "resourceId": 23916,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "abnormalConfig-export",
+        "taskName": "用户激励-星币异常配置-导出",
+        "resourceName": "导出",
+        "resourceId": 23918,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "orderList-export",
+        "taskName": "运动商城-订单管理-导出",
+        "resourceName": "导出",
+        "resourceId": 23921,
+        "resourceCode": "export"
+    },
+    {
+        "taskCode": "hostActivation-export",
+        "taskName": "设备管理-主机激活-导出",
+        "resourceName": "导出",
+        "resourceId": 23956,
+        "resourceCode": "export"
+    }
+]
